@@ -86,7 +86,7 @@ export default function Home() {
         <div className="mb-16">
           <h3 className="text-3xl font-semibold">Our Mission</h3>
           <p className="mt-4 max-w-4xl mx-auto">
-            At PlatePlan, we're passionate about empowering individuals to make
+            At PlatePlan, we are passionate about empowering individuals to make
             informed decisions about their nutrition. Our mission is to provide
             easy-to-use tools and accurate information to help you achieve your
             health and wellness goals.

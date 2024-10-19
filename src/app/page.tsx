@@ -11,6 +11,7 @@ import vteam from "./../../public/team_1.jpg";
 import { Button } from "@/components/ui/button";
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 
+
 export default function Home() {
   const [isImageVisible, setIsImageVisible] = useState(false);
   const [isAboutVisible, setIsAboutVisible] = useState(false);

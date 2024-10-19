@@ -3,10 +3,8 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
-import logo from "./../../public/landing-photo.jpeg";
+import logo from "./../../public/fruits_image.jpg";
 import { useState, useEffect, useRef } from "react";
-import aboutimage from "./../../public/about_us_image.jpg";
-import teambackground from "./../../public/team_background_image.jpg";
 import kteam from "./../../public/team_3.jpg";
 import jteam from "./../../public/team_2.jpg";
 import vteam from "./../../public/team_1.jpg";
@@ -77,107 +75,96 @@ export default function Home() {
         </div>
       </div>
 
-      {/* About Us */}
-      <div
-        id="about"
-        className="h-screen flex flex-col justify-center items-center bg-gray-100"
-        style={{
-          backgroundImage: `url(${aboutimage.src})`,
-          backgroundSize: "cover",
-          width: "100vw",
-        }}
-      >
-        <div
-          ref={aboutRef}
-          className={`relative z-20 max-w-4xl text-center p-8 text-white border-4 border-white rounded-3xl transition-all duration-1000 ease-in-out ${
-            isAboutVisible
-              ? "opacity-100 translate-x-0"
-              : "opacity-0 translate-x-10"
-          }`}
-        >
-          <h2 className="text-5xl font-bold mb-8">ABOUT US</h2>
-          <p className="text-xl mb-4">
-            Born from a passion for wellness and optimal living, PlatePlan
-            embodies the power of mindful eating and the pursuit of a balanced
-            lifestyle.
+      <div>
+      
+      {/* About Us Section */}
+      <div className="py-16 px-8 bg-white text-center">
+        <h2 className="text-5xl font-bold mb-8">About PlatePlan</h2>
+
+        {/* Mission Statement */}
+        <div className="mb-16">
+          <h3 className="text-3xl font-semibold">Our Mission</h3>
+          <p className="mt-4 max-w-4xl mx-auto">
+            At PlatePlan, we're passionate about empowering individuals to make
+            informed decisions about their nutrition. Our mission is to provide
+            easy-to-use tools and accurate information to help you achieve your
+            health and wellness goals.
           </p>
-          <p className="text-xl mb-4">
-            We are dedicated to empowering individuals with the tools to take
-            control of their nutrition, offering a seamless blend of
-            personalized meal planning and accurate calorie tracking.
-          </p>
-          <p className="text-xl mb-4">
-            PlatePlan is designed to inspire healthier choices and sustainable
-            habits, helping you achieve your wellness goals while adapting to
-            the demands of a changing world.
-          </p>
-          <p className="text-xl mb-4">
-            At PlatePlan, we believe that proper nutrition is the key to
-            unlocking your full potential, creating a healthier and more vibrant
-            future for all.
-          </p>
+        </div>
+
+        {/* Feature Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <div className="bg-gray-100 p-6 rounded-lg shadow-md">
+            <div className="text-4xl mb-4">🍏</div>
+            <h4 className="text-xl font-bold">Personalized Tracking</h4>
+            <p className="mt-2">
+              Personalized nutrition plans and tracking tools crafted to suit 
+              your unique lifestyle and objectives.
+            </p>
+          </div>
+
+          <div className="bg-gray-100 p-6 rounded-lg shadow-md">
+            <div className="text-4xl mb-4">🥕</div>
+            <h4 className="text-xl font-bold">Extensive Food Database</h4>
+            <p className="mt-2">
+              Access a vast and comprehensive database of foods, offering 
+              complete and detailed nutritional insights.
+            </p>
+          </div>
+
+          <div className="bg-gray-100 p-6 rounded-lg shadow-md">
+            <div className="text-4xl mb-4">🌿</div>
+            <h4 className="text-xl font-bold">Expert Insights</h4>
+            <p className="mt-2">
+              Receive regular tips and expert articles to support informed 
+              and healthier dietary decisions.
+            </p>
+          </div>
         </div>
       </div>
 
-
       {/* Meet the Team Section */}
-      <div
-        className="h-screen flex flex-col justify-center items-center bg-gray-100"
-        style={{
-          backgroundImage: `url(${teambackground.src})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          width: "100vw",
-        }}
-      >
-      <div className="max-w-6xl text-center p-8 text-white">
-        <h2 className="text-5xl font-bold mb-8">Meet the Team</h2>
-
-        <div className="flex flex-col space-y-8">
-          <div className="flex items-center space-x-8 ">
+      <div className="py-16 px-8 bg-gray-100">
+        <h2 className="text-5xl font-bold text-center mb-8">Meet the Team</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="flex flex-col items-center">
             <Image
               src={kteam}
               alt="Khehla Dlamini"
-              className="rounded-full mr-10"
+              className="rounded-full mb-4"
               width={150}
               height={150}
             />
-            <div className="text-left">
-              <h3 className="text-4xl font-bold">Khehla Dlamini</h3>
-              <p className="text-xl">Project Manager, UI/UX Designer</p>
-            </div>
+            <h3 className="text-2xl font-bold">Khehla Dlamini</h3>
+            <p className="text-xl text-gray-700">Project Manager, UI/UX Designer</p>
           </div>
 
-          <div className="flex items-center space-x-8">
+          <div className="flex flex-col items-center">
             <Image
               src={vteam}
               alt="Valrite Ehachi"
-              className="rounded-full"
+              className="rounded-full mb-4"
               width={150}
               height={150}
             />
-            <div className="text-left">
-              <h3 className="text-4xl font-bold">Valrite Ehachi</h3>
-              <p className="text-xl">Frontend Developer & Writer</p>
-            </div>
+            <h3 className="text-2xl font-bold">Valrite Ehachi</h3>
+            <p className="text-xl text-gray-700">Frontend Developer & Writer</p>
           </div>
 
-          <div className="flex items-center space-x-8">
+          <div className="flex flex-col items-center">
             <Image
               src={jteam}
               alt="Joseph Karanja"
-              className="rounded-full"
+              className="rounded-full mb-4"
               width={150}
               height={150}
             />
-            <div className="text-left">
-              <h3 className="text-4xl font-bold">Joseph Karanja</h3>
-              <p className="text-xl">Backend Developer & QA Engineer</p>
-            </div>
-            </div> 
+            <h3 className="text-2xl font-bold">Joseph Karanja</h3>
+            <p className="text-xl text-gray-700">Backend Developer & QA Engineer</p>
           </div>
         </div>
       </div>
+    </div>
     </div>  
   );
 }

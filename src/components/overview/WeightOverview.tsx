@@ -30,12 +30,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { useGetChartData } from "@/hooks/db/overviewHooks";
-import {
-  useGetDayWeightEntry,
-  useGetWeightEntry,
-} from "@/hooks/db/weightDataHooks";
-import { WeightSelect } from "@/db/schema";
+import { useGetDayWeightEntry } from "@/hooks/db/weightDataHooks";
 
 export const description = "A bar chart for calorie intake over the past week.";
 
@@ -137,7 +132,7 @@ const WeightOverview = () => {
       </CardContent>
       <CardFooter className="flex-col items-start gap-2 text-sm">
         <div className="flex gap-2 font-medium leading-none">
-          Calorie intake over the past week
+          Weight over the past week
         </div>
       </CardFooter>
     </Card>

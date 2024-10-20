@@ -79,7 +79,7 @@ export default function Home() {
       <div>
       
       {/* About Us Section */}
-      <div className="py-16 px-8 bg-white text-center">
+      <div className="py-16 px-8 bg-grey text-center">
         <h2 className="text-5xl font-bold mb-8">About PlatePlan</h2>
 
         {/* Mission Statement */}
@@ -97,8 +97,8 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
           <div className="bg-gray-100 p-6 rounded-lg shadow-md">
             <div className="text-4xl mb-4">🍏</div>
-            <h4 className="text-xl font-bold">Personalized Tracking</h4>
-            <p className="mt-2">
+            <h4 className="text-xl dark:text-gray-800 font-bold">Personalized Tracking</h4>
+            <p className="mt-2 text-gray-800">
               Personalized nutrition plans and tracking tools crafted to suit 
               your unique lifestyle and objectives.
             </p>
@@ -106,8 +106,8 @@ export default function Home() {
 
           <div className="bg-gray-100 p-6 rounded-lg shadow-md">
             <div className="text-4xl mb-4">🥕</div>
-            <h4 className="text-xl font-bold">Extensive Food Database</h4>
-            <p className="mt-2">
+            <h4 className="text-xl text-gray-800 font-bold ">Extensive Food Database</h4>
+            <p className="mt-2 text-gray-800">
               Access a vast and comprehensive database of foods, offering 
               complete and detailed nutritional insights.
             </p>
@@ -115,8 +115,8 @@ export default function Home() {
 
           <div className="bg-gray-100 p-6 rounded-lg shadow-md">
             <div className="text-4xl mb-4">🌿</div>
-            <h4 className="text-xl font-bold">Expert Insights</h4>
-            <p className="mt-2">
+            <h4 className="text-xl text-gray-800 font-bold">Expert Insights</h4>
+            <p className="mt-2 text-gray-800">
               Receive regular tips and expert articles to support informed 
               and healthier dietary decisions.
             </p>
@@ -126,7 +126,7 @@ export default function Home() {
 
       {/* Meet the Team Section */}
       <div className="py-16 px-8 bg-gray-100">
-        <h2 className="text-5xl font-bold text-center mb-8">Meet the Team</h2>
+        <h2 className="text-5xl font-bold text-gray-800 text-center mb-8">Meet the Team</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <div className="flex flex-col items-center">
             <Image
@@ -136,7 +136,7 @@ export default function Home() {
               width={150}
               height={150}
             />
-            <h3 className="text-2xl font-bold">Khehla Dlamini</h3>
+            <h3 className="text-2xl text-gray-800 font-bold">Khehla Dlamini</h3>
             <p className="text-xl text-gray-700">Project Manager, UI/UX Designer</p>
           </div>
 
@@ -148,7 +148,7 @@ export default function Home() {
               width={150}
               height={150}
             />
-            <h3 className="text-2xl font-bold">Valrite Ehachi</h3>
+            <h3 className="text-2xl text-gray-800 font-bold">Valrite Ehachi</h3>
             <p className="text-xl text-gray-700">Frontend Developer & Writer</p>
           </div>
 
@@ -160,7 +160,7 @@ export default function Home() {
               width={150}
               height={150}
             />
-            <h3 className="text-2xl font-bold">Joseph Karanja</h3>
+            <h3 className="text-2xl text-gray-800 font-bold">Joseph Karanja</h3>
             <p className="text-xl text-gray-700">Backend Developer & QA Engineer</p>
           </div>
         </div>

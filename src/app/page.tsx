@@ -17,6 +17,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { GlassWater, Weight } from "lucide-react";
 
 export default function Home() {
   const [isImageVisible, setIsImageVisible] = useState(false);
@@ -122,13 +123,7 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
           <div className="bg-accent p-6 rounded-md shadow-lg flex flex-col gap-2">
             <div className="flex justify-center mb-2">
-              <Image
-                src="/nutritionx.png"
-                alt="food"
-                width={200}
-                height={50}
-                className="h-10 w-40 text-accent-foreground"
-              />
+              <GlassWater className="h-full" />
             </div>
             <h4 className="text-xl text-accent-foreground font-bold">
               Track Water Intake
@@ -160,13 +155,7 @@ export default function Home() {
 
           <div className="bg-accent p-6 rounded-md shadow-lg flex flex-col gap-2">
             <div className="flex justify-center mb-2">
-              <Image
-                src="/nutritionx.png"
-                alt="food"
-                width={200}
-                height={50}
-                className="h-10 w-40"
-              />
+              <Weight className="h-full" />
             </div>
             <h4 className="text-xl text-accent-foreground font-bold">
               Track your weight

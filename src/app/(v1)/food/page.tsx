@@ -14,7 +14,7 @@ const PickDate = dynamic(() => import("@/components/food/PickDate"), {
 const FoodPage = async () => {
   const userId = await getUserId();
   return (
-    <div className="h-full w-full flex items-center justify-center">
+    <div className="h-full w-full flex items-center justify-center p-4">
       <SetUserId userId={userId} />
       <div className=" container h-full mx-auto flex flex-col gap-2 p-4tems-center justify-center ">
         <AddFood today />

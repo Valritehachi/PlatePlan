@@ -9,7 +9,14 @@ import kteam from "./../../public/team_3.jpg";
 import jteam from "./../../public/team_2.jpg";
 import vteam from "./../../public/team_1.jpg";
 import { Button } from "@/components/ui/button";
-import { SignedIn, SignedOut } from "@clerk/nextjs";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default function Home() {
   const [isImageVisible, setIsImageVisible] = useState(false);
@@ -68,10 +75,7 @@ export default function Home() {
           <h1 className="scroll-m-0 text-7xl font-extrabold tracking-tight lg:text-8xl">
             Plate Plan
           </h1>
-          <h3
-            className="scroll-m-0 text-2xl tracking-tight"
-            style={{ fontStyle: "italic !important" }}
-          >
+          <h3 className="scroll-m-0 text-2xl tracking-tight">
             Eat Well, Feel Great
           </h3>
           <Link href="/signin">
@@ -100,10 +104,10 @@ export default function Home() {
         <div className="mb-16">
           <h3 className="text-3xl font-semibold">Our Mission</h3>
           <p className="mt-4 max-w-4xl mx-auto">
-            At PlatePlan, we are passionate about empowering individuals to
-            make informed decisions about their nutrition. Our mission is to
-            provide easy-to-use tools and accurate information to help you
-            achieve your health and wellness goals.
+            At PlatePlan, we are passionate about empowering individuals to make
+            informed decisions about their nutrition. Our mission is to provide
+            easy-to-use tools and accurate information to help you achieve your
+            health and wellness goals.
           </p>
         </div>
       </div>
@@ -111,58 +115,81 @@ export default function Home() {
       {/* Feature Cards */}
       <div
         ref={featuresRef}
-        className={`py-16 px-8 bg-gray-100 transition-opacity duration-1000 ease-in-out ${
+        className={`py-16 px-8 bg-accent transition-opacity duration-1000 ease-in-out ${
           isFeaturesVisible ? "opacity-100" : "opacity-0"
         }`}
       >
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-          <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-            <div className="text-4xl mb-4">🍏</div>
-            <h4 className="text-xl dark:text-gray-800 font-bold">
-              Personalized Tracking
+          <div className="bg-accent p-6 rounded-md shadow-lg flex flex-col gap-2">
+            <div className="flex justify-center mb-2">
+              <Image
+                src="/nutritionx.png"
+                alt="food"
+                width={200}
+                height={50}
+                className="h-10 w-40 text-accent-foreground"
+              />
+            </div>
+            <h4 className="text-xl text-accent-foreground font-bold">
+              Track Water Intake
             </h4>
-            <p className="mt-2 text-gray-800">
-              Personalized nutrition plans and tracking tools crafted to suit
-              your unique lifestyle and objectives.
+            <p className="mt-2 text-accent-foreground">
+              Set daily water intake goals and keep track of your daily water
+              consumption while visualizing your progress in a charts.
             </p>
           </div>
 
-          <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-            <div className="text-4xl mb-4">🥕</div>
-            <h4 className="text-xl text-gray-800 font-bold">
+          <div className="bg-accent p-6 rounded-md shadow-lg flex flex-col gap-2">
+            <div className="flex justify-center mb-2">
+              <Image
+                src="/nutritionx.png"
+                alt="food"
+                width={200}
+                height={50}
+                className="h-10 w-40"
+              />
+            </div>
+            <h4 className="text-xl text-accent-foreground font-bold">
               Extensive Food Database
             </h4>
-            <p className="mt-2 text-gray-800">
-              Access a vast and comprehensive database of foods, offering
-              complete and detailed nutritional insights.
+            <p className="mt-2 text-accent-foreground">
+              Easily log your meals by searching a vast database of food items
+              through the Nutritionix API.
             </p>
           </div>
 
-          <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-            <div className="text-4xl mb-4">🌿</div>
-            <h4 className="text-xl text-gray-800 font-bold">
-              Expert Insights
+          <div className="bg-accent p-6 rounded-md shadow-lg flex flex-col gap-2">
+            <div className="flex justify-center mb-2">
+              <Image
+                src="/nutritionx.png"
+                alt="food"
+                width={200}
+                height={50}
+                className="h-10 w-40"
+              />
+            </div>
+            <h4 className="text-xl text-accent-foreground font-bold">
+              Track your weight
             </h4>
-            <p className="mt-2 text-gray-800">
-              Receive regular tips and expert articles to support informed and
-              healthier dietary decisions.
+            <p className="mt-2 text-accent-foreground">
+              Log your weight regularly to monitor progress. View your history
+              through graphs
             </p>
           </div>
         </div>
       </div>
 
-      {/* Meet the Team Section */}
       <div
         ref={teamRef}
-        className={`py-16 px-8 bg-gray-100 transition-opacity duration-1000 ease-in-out ${
+        className={`py-16 px-8 bg-accent transition-opacity duration-1000 ease-in-out ${
           isTeamVisible ? "opacity-100" : "opacity-0"
         }`}
       >
-        <h2 className="text-5xl font-bold text-gray-800 text-center mb-8">
+        <h2 className="text-5xl font-bold text-accent-foreground text-center mb-8">
           Meet the Team
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <div className="flex flex-col items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <div className="flex flex-col items-center text-center">
             <Image
               src={kteam}
               alt="Khehla Dlamini"
@@ -170,13 +197,12 @@ export default function Home() {
               width={150}
               height={150}
             />
-            <h3 className="text-2xl text-gray-800 font-bold">Khehla Dlamini</h3>
-            <p className="text-xl text-gray-700">
+            <h3 className="text-2xl  font-bold">Khehla Dlamini</h3>
+            <p className="text-lg text-muted-foreground">
               Project Manager, UI/UX Designer
             </p>
           </div>
-
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center text-center">
             <Image
               src={vteam}
               alt="Valrite Ehachi"
@@ -184,22 +210,21 @@ export default function Home() {
               width={150}
               height={150}
             />
-            <h3 className="text-2xl text-gray-800 font-bold">Valrite Ehachi</h3>
-            <p className="text-xl text-gray-700">
+            <h3 className="text-2xl  font-bold">Valrite Ehachi</h3>
+            <p className="text-lg text-muted-foreground">
               Frontend Developer & Writer
             </p>
           </div>
-
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center text-center">
             <Image
               src={jteam}
-              alt="Joseph Karanja"
+              alt="Khehla Dlamini"
               className="rounded-full mb-4"
               width={150}
               height={150}
             />
-            <h3 className="text-2xl text-gray-800 font-bold">Joseph Karanja</h3>
-            <p className="text-xl text-gray-700">
+            <h3 className="text-2xl  font-bold">Joseph Karanja</h3>
+            <p className="text-lg text-muted-foreground">
               Backend Developer & QA Engineer
             </p>
           </div>
@@ -208,4 +233,3 @@ export default function Home() {
     </div>
   );
 }
-

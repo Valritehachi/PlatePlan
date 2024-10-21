@@ -24,12 +24,6 @@ const Navbar: React.FC = () => {
             <Button asChild variant={"link"} className="text-accent-foreground">
               <Link href="/overview">Overview</Link>
             </Button>
-            {/* <Button asChild variant={"link"} className="text-accent-foreground">
-              <Link href="/food">Food</Link>
-            </Button>
-            <Button asChild variant={"link"} className="text-accent-foreground">
-              <Link href="/bodycomposition">Body Composition</Link>
-            </Button> */}
           </SignedIn>
         </div>
         <div className="flex gap-4 ">

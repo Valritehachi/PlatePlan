@@ -40,9 +40,6 @@ const Navbar: React.FC = () => {
             <Link href="/">PlatePlan</Link>
           </h3>
           <div className="hidden sm:block">
-            <Button asChild variant={"link"} className="text-accent-foreground">
-              <Link href="#about">About us</Link>
-            </Button>
           </div>
           <SignedIn>
             <div className="hidden sm:block">
